@@ -1,4 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+}
+
 body {
   background-color: #1E1E1E;
+}
 
+main {
+  height: 90vh;
+  max-width: 80vw;
+  background-color: white;
+  margin: auto;
+  display: flex;
+}
+
+.left {
+  height: inherit;
+  min-width: 34%;
+  background: linear-gradient(26.99deg, rgba(69, 26, 78, 0.2) 52.61%, rgba(60, 13, 13, 0.2) 95.07%), linear-gradient(164.67deg, rgba(22, 4, 31, 0.98) 4.47%, #380C4A 15.5%, #3B0E46 19.19%, #3D0F42 23.38%, #441436 30.26%, #33254E 36.4%, #2B2D59 42.79%, #292654 47.99%, #271F4F 52.8%, #240D37 64.72%, #22052D 79.1%);
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  width: 76%;
+}
+
+.right form {
+  width: 50%;
+  margin-left: 15%;
+}
+
+.right form .inputBox {
+  margin-top: 15px;
+}
+
+.right form .inputBox input {
+  width: 100%;
+  height: 44px;
+  border: 1px solid rgba(0, 0, 0, 0.13);
+  border-radius: 6px;
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: 0.125em;
+  padding: 0 3%;
+}
+
+
+
+.right form .inputBox span {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.155em;
+  padding-bottom: 5px;
+}
+
+.right form .flexBox {
+  display: flex;
+  gap: 15px;
+}
+
+.right form .flexBox .inputBox{
+  flex: 1 1 150px;
+}
+.right form .submitBtn{
+  color: white;
+    padding: 1rem;
+    margin-top: 2rem;
+    width: 100%;
+    background: #220930;
+    border-radius: 6px;
 }
