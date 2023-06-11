@@ -2,15 +2,18 @@
   margin: 0;
   padding: 0;
   text-transform: uppercase;
+  font-size: 16px;
 }
 
 body {
   background-color: #1E1E1E;
 }
 
-main {
-  height: 90vh;
-  max-width: 80vw;
+.main {
+  /* height: 90vh;
+  max-width: 80vw; */
+  height: 650px;
+  width: 1024px;
   background-color: white;
   margin: auto;
   display: flex;
@@ -18,8 +21,9 @@ main {
 
 .left {
   height: inherit;
-  min-width: 34%;
-  background: linear-gradient(26.99deg, rgba(69, 26, 78, 0.2) 52.61%, rgba(60, 13, 13, 0.2) 95.07%), linear-gradient(164.67deg, rgba(22, 4, 31, 0.98) 4.47%, #380C4A 15.5%, #3B0E46 19.19%, #3D0F42 23.38%, #441436 30.26%, #33254E 36.4%, #2B2D59 42.79%, #292654 47.99%, #271F4F 52.8%, #240D37 64.72%, #22052D 79.1%);
+  min-width: 40%;
+  background: linear-gradient(27deg, rgb(60 103 242 / 20%) 52.61%, rgb(250 48 48 / 28%) 95.07%), linear-gradient(140deg, rgba(22, 4, 31, 0.98) 4.47%, #380C4A 15.5%, #3B0E46 19.19%, #3D0F42 23.38%, #441436 30.26%, #33254E 36.4%, #2B2D59 42.79%, #292654 47.99%, #271F4F 52.8%, #240D37 64.72%, #140023 79.1%);
+  /* background: linear-gradient(26.99deg, rgba(69, 26, 78, 0.2) 52.61%, rgba(60, 13, 13, 0.2) 95.07%), linear-gradient(164.67deg, rgba(22, 4, 31, 0.98) 4.47%, #380C4A 15.5%, #3B0E46 19.19%, #3D0F42 23.38%, #441436 30.26%, #33254E 36.4%, #2B2D59 42.79%, #292654 47.99%, #271F4F 52.8%, #240D37 64.72%, #22052D 79.1%); */
 }
 
 .right {
@@ -41,23 +45,25 @@ main {
 
 .right form .inputBox input {
   width: 100%;
-  height: 44px;
-  border: 1px solid rgba(0, 0, 0, 0.13);
+  height: 2.5rem;
+  border: 2px solid rgba(0, 0, 0, 0.13);
   border-radius: 6px;
-  font-size: 15px;
-  line-height: 18px;
+  font-size: 1rem;
+  line-height: 1rem;
   letter-spacing: 0.125em;
   padding: 0 3%;
+  font-weight: 700;
 }
 
-
+.right form .inputBox input:focus {
+  outline: none;
+}
 
 .right form .inputBox span {
   font-weight: 700;
-  font-size: 12px;
-  line-height: 14px;
+  font-size: 0.5rem;
+  line-height: 0.9rem;
   letter-spacing: 0.155em;
-  padding-bottom: 5px;
 }
 
 .right form .flexBox {
@@ -65,14 +71,151 @@ main {
   gap: 15px;
 }
 
-.right form .flexBox .inputBox{
+.right form .flexBox .inputBox {
   flex: 1 1 150px;
 }
-.right form .submitBtn{
+
+.right form .submitBtn {
   color: white;
-    padding: 1rem;
-    margin-top: 2rem;
-    width: 100%;
-    background: #220930;
-    border-radius: 6px;
+  padding: 1rem;
+  margin-top: 2rem;
+  width: 100%;
+  background: #220930;
+  border-radius: 6px;
+}
+
+.error {
+  color: red;
+  font-size: 10px;
+  text-transform: capitalize;
+  padding-top: 2px;
+}
+
+
+.container {
+  /* height: 90vh;
+  max-width: 80vw; */
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  margin: 6% 0 0 10%;
+  height: 80vh;
+  width: 30vw;
+}
+
+.cardFrame {
+  width: 24rem;
+  height: 14rem;
+  border-radius: 10px;
+}
+
+.cardFront {
+  background: rgba(255, 255, 255, 0.01);
+  backdrop-filter: blur(18.5px);
+}
+
+.cardBack {
+  background: linear-gradient(106.8deg, #FFFFFF 0%, #D9D9D9 103.94%);
+  box-shadow: 10px 11px 62px rgba(0, 0, 0, 0.19);
+  margin-top: 25px;
+  margin-left: 4rem;
+}
+
+.cardBack .blackStrip {
+  width: 100%;
+  height: 20%;
+  background: black;
+  margin-top: 5%;
+}
+
+.cardBack .cvvBox {
+  height: 15%;
+  width: 80%;
+  margin: auto;
+  margin-top: 5%;
+  background: #ADB6BF;
+  border-radius: 4px;
+}
+
+.cardBack .cvv {
+  text-align: end;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 2.3rem;
+  margin-right: 1rem;
+  letter-spacing: 0.235em;
+  color: #FFFFFF;
+}
+
+.cardBack img {
+  margin: 9% 29%;
+}
+
+.cardFront img {
+  margin: 5%;
+}
+
+.cardFront .cardNumber {
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 31px;
+  letter-spacing: 0.18em;
+  color: #FFFFFF;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.cardFront .name,
+.cardFront .expDate {
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 15px;
+  letter-spacing: 0.19em;
+  color: #FFFFFF;
+  display: inline;
+}
+
+.cardFront .name {
+  margin-left: 2rem;
+}
+
+.cardFront .expDate {
+  float: right;
+  margin-right: 3rem;
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+  .main {
+    height: 508px;
+    width: 770px;
+  }
+
+  .cardFrame {
+    width: 18rem;
+    height: 10rem;
+  }
+
+  .cardBack img {
+    margin: 1.5rem 4rem;
+    height: 1.8rem;
+  }
+
+  .cardBack .cvv {
+    line-height: 1.6rem;
+  }
+
+  .cardFront .cardNumber {
+    font-size: 1.1rem;
+    line-height: 2rem;
+    margin: 0.5rem 0;
+
+  }
+  .cardFront .name{
+    font-size: .5rem;
+    line-height: 1rem;
+  }
+
 }

@@ -1,17 +1,18 @@
-import './Cards.css'
-
 import React from 'react'
 
 function Cards() {
     return (
         <div className='container'>
-            <div className='cardFrame cardFront' >
-                <img src='circles.svg'></img>
-                <p className='cardNumber'>0000 0000 0000 0000</p>
-                <p className='name'>Mr. Avinash Tonde</p>
-                <p className='expDate'>12/24</p>
+            <div className="cardFrame" style={{ backgroundImage: `url("bg.png")` }}>
+                <div className='cardFrame cardFront' >
+                    <img src='circles.svg'></img>
+                    <p className='cardNumber'>1234 4567 8901 0000</p>
+                    <p className='name'>Mr. Avinash Tonde</p>
+                    <p className='expDate'>00/00</p>
 
+                </div>
             </div>
+
             <div className='cardFrame cardBack' >
                 <div className='blackStrip'>
 
