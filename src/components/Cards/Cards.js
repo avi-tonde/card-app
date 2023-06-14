@@ -7,11 +7,11 @@ function Cards(props) {
             <div className="cardFrame" style={{ backgroundImage: `url("bg.png")` }}>
                 <div className='cardFrame cardFront' >
                     <div className=''>
-                        {/* {props.cardHolderName ? <img src='circles.svg' alt='circles'></img> : ""} */}
-                        <img src='circles.svg' alt='circles'></img>
+                        {props.cardHolderName ?               <>         <img src='circles.svg' alt='circles'></img>
                         <p className='cardNumber'>{props.cardNumber}</p>
                         <p className='name'>{props.cardHolderName}</p>
-                        <p className='expDate'>{props.mm && props.yy ? props.mm + "/" + props.yy : ""}</p>
+                        <p className='expDate'>{props.mm && props.yy ? props.mm + "/" + props.yy : ""}</p></>  : ""}
+
                     </div>
 
                 </div>
