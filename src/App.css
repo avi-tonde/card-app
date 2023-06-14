@@ -82,6 +82,7 @@ body {
   width: 100%;
   background: #220930;
   border-radius: 6px;
+  cursor: pointer;
 }
 
 .error {

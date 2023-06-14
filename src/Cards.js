@@ -1,14 +1,18 @@
 import React from 'react'
 
-function Cards() {
+function Cards(props) {
+
     return (
         <div className='container'>
             <div className="cardFrame" style={{ backgroundImage: `url("bg.png")` }}>
                 <div className='cardFrame cardFront' >
-                    <img src='circles.svg'></img>
-                    <p className='cardNumber'>1234 4567 8901 0000</p>
-                    <p className='name'>Mr. Avinash Tonde</p>
-                    <p className='expDate'>00/00</p>
+                    <div className=''>
+                        {/* {props.cardHolderName ? <img src='circles.svg' alt='circles'></img> : ""} */}
+                        <img src='circles.svg' alt='circles'></img>
+                        <p className='cardNumber'>{props.cardNumber}</p>
+                        <p className='name'>{props.cardHolderName}</p>
+                        <p className='expDate'>{props.mm && props.yy ? props.mm + "/" + props.yy : ""}</p>
+                    </div>
 
                 </div>
             </div>
@@ -18,9 +22,9 @@ function Cards() {
 
                 </div>
                 <div className='cvvBox'>
-                    <p className='cvv'>000</p>
+                    <p className='cvv'>{props.cvv}</p>
                 </div>
-                <img src='lines.svg'></img>
+                <img src='lines.svg' alt='lines'></img>
 
             </div>
 
